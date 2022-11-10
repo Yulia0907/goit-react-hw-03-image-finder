@@ -13,7 +13,7 @@ export const ImageGallery = ({ images, onClickGallery }) => {
               webURL={webURL}
               largeURL={largeURL}
               tags={tags}
-              onClick={onClickGallery}
+              onClickGallery={onClickGallery}
             />
           );
         })}
@@ -27,7 +27,8 @@ ImageGallery.propTypes = {
   images: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      webformatURL: PropTypes.string.isRequired,
+      webURL: PropTypes.string.isRequired,
+      largeURL: PropTypes.string.isRequired,
       tags: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,

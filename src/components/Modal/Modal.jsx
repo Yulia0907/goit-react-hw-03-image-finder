@@ -6,7 +6,7 @@ export default class Modal extends Component {
   static propTypes = {
     onCloseModal: PropTypes.func.isRequired,
     currentItem: PropTypes.objectOf({
-      largeImageURL: PropTypes.string.isRequired,
+      largeURL: PropTypes.string.isRequired,
       tags: PropTypes.string.isRequired,
     }).isRequired,
   };
@@ -34,13 +34,13 @@ export default class Modal extends Component {
   render() {
     console.log(this.props.currentItem);
     const {
-      currentItem: { largeImageURL, tags },
+      currentItem: { largeURL, tags },
     } = this.props;
 
     return (
       <div className="Overlay" onClick={this.onCloseByBackdrop}>
         <div className="Modal">
-          <img src={largeImageURL} alt={tags} />
+          <img src={largeURL} alt={tags} />
         </div>
       </div>
     );

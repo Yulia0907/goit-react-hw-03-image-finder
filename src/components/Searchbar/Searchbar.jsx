@@ -33,7 +33,7 @@ export default class Searchbar extends Component {
         <header className="Searchbar">
           <form className="SearchForm" onSubmit={this.handleSubmit}>
             <button type="submit" className="SearchForm-button">
-              <ImSearch className="Search-svg" width="23px" height="23px" />
+              <ImSearch className="Search-svg"/>
               <span className="SearchForm-button-label">Search</span>
             </button>
 
